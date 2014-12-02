@@ -1,0 +1,2 @@
+module InterviewAppointmentsHelper
+end

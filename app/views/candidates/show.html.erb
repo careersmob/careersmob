@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+    		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Candidate – CAREERSMOB</title>
+        <meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="../assets/basscss.css" rel="stylesheet">
+        <link rel="stylesheet" href="../assets/main.css" rel="stylesheet">
+        <!-- <script src="js/vendor/modernizr-2.6.2.min.js"></script> -->
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="bclearfixsehappy">You are using an <strong>outdated</strong> bclearfixser. Please <a href="http://bclearfixsehappy.com/">upgrade your bclearfixser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+
+
+<div class="container p2">
+	<div class="clearfix">
+		<div class="col col-10 left p1 border">
+			 <div class="col col-2 m1 py3 center border bg-lighter-gray rounded">Avatar
+					 </div>
+					 <div class="col col-8 ml2 py1 bg-lightgray mb3">
+					 	
+					 		<span class="h2"><%= current_user.first_name %><br> <%= current_user.last_name %></span><br>
+					 		<span class="h6"><%= current_user.headline %></span>
+					 </div>
+					<div class="col col-8 px1 mr1 mb1 justify"><b><%= current_user.summary %>
+					</div>
+					 <div class="col col-12"><%= link_to "Linkedin", current_user.public_profile_url %>
+					 </div>
+		</div>
+		<div class="col col-2 ">
+			<%= link_to('Logout', destroy_user_session_path, :method => :delete, 'data-no-turbolink' => true) %>   
+		</div>
+	</div>
+</div>
+
+<div class="container p2">
+	<div class="clearfix">
+
+		<%= link_to new_interview_appointment_path, :class => "col col-2 left border center py3 rounded blue", 'data-no-turbolink' => true do %>				
+			<span class="h1 center p1 border circle">
+				&nbsp;+&nbsp;</span>
+			<span class="col h3 py2 blue">Schedule an interview</span>
+			
+		<% end %>
+		
+	</div>
+</div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="../assets/plugins.js"></script>
+        <script src="../assets/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>

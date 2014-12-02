@@ -1,0 +1,64 @@
+<%= form_for(@interview_appointment) do |f| %>
+	<div class="container">
+		<div class="clearfix center mt4">
+			<span class="h1">Schedule an interview</span>
+			
+			<div class="col-8 mx-auto border mt3">
+				<div class="inline-block clearfix mb2">
+	 				<div class="col-8 py2 mx-auto">
+						<%= f.label :which_position_are_you_interested_in?, :class => "h3" %>
+					</div>
+					<%= f.text_field :position, :class => "col-12 field-light rounded-right x-group-item center", :placeholder => "Software Engineer" %>
+				</div>
+			</div>
+
+			<div class="col-8 mx-auto border mt3">
+					<div class="col-8 py2 mx-auto">
+						<%= f.label :pick_the_date, :class => "h3" %>
+					</div>
+					<form class="clearfix mb2 px4">
+						<%= f.text_field :appointment_date, :class => "col col-6 mb0 field-light rounded-left x-group-item", :placeholder => "Date", :style => "margin-top: -3px" %>
+						<%= f.select :appointment_time, options_for_select([["9am", "9am"], ["10am", "10am"], ["11am", "11am"], ["12pm", "12pm"],["1pm", "1pm"], ["2pm", "2pm"], ["3pm", "3pm"], ["4pm", "4pm"], ["5pm", "5pm"], ["6pm", "6pm"], ["7pm", "7pm"]]), :class => "col col-6 mb0 field-light rounded-left x-group-item" %>
+					</form>
+			</div>
+
+			<div class="col-8 mx-auto border mt3">
+				<div class="col-8 py2 mx-auto">
+					<%= f.label :select_the_expert, :class => "h3" %>
+				</div>
+				<div class="clearfix">
+					<div class="col col-4">
+						<%= f.radio_button :interviewer, "helper1", :value => "HELPER001" %>
+						<label for="interviewer">Helper1</label>
+					</div>
+					<div class="col col-4">
+						<%= f.radio_button :interviewer, "helper2", :value => "HELPER002" %>
+						<label for="check-helper2">Helper2</label>
+					</div>	
+					<div class="col col-4">
+						
+						<%= f.radio_button :interviewer, "helper3", :value => "HELPER003" %>
+						<label for="check-helper3">Helper3</label>
+					</div>
+				</div>
+			</div>
+			
+		<button class="button-red mt3 h2">Submit and schedule</button>
+		
+	</div>
+	
+	<script>
+		$( document ).ready(function() {
+			console.log($("#interview_appointment_appointment_date"));
+		  	$("#interview_appointment_appointment_date").datepicker();
+		});
+
+		
+
+		// $(".clearfix input").on('change', function() {
+		// 	console.log($('input[name="helper-choice"]:checked'));
+  //   		alert($('input[name="helper-choice"]:checked', '.clearfix').val());
+  //       });
+	</script>
+
+<% end %>
