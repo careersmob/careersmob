@@ -2,7 +2,7 @@
 # Many of these configuration options can be set straight in your model.
 require 'omniauth-linkedin'
 Devise.setup do |config|
-  config.omniauth :linkedin, '75oxuwyvkwhsmw', 'JBsIeq37ZmnsBMFD', :scope => 'r_fullprofile r_emailaddress', :fields => ["email-address", "first-name", "last-name", "summary", "headline", "picture-url", "public-profile-url"]
+  config.omniauth :linkedin, '75oxuwyvkwhsmw', 'JBsIeq37ZmnsBMFD', :scope => 'r_fullprofile r_emailaddress', :fields => ["id", "email-address", "first-name", "last-name", "summary", "headline", "picture-url", "public-profile-url"]
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
