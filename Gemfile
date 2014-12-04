@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+gem 'google-api-client'
+gem "google-instant-hangouts"
 gem 'pg'
 gem 'omniauth'
 gem 'omniauth-linkedin'

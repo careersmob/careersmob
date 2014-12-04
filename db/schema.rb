@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20141202013959) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "position"
-    t.date     "appointment_date"
+    t.string   "appointment_date"
     t.time     "appointment_time"
     t.string   "interviewer"
   end

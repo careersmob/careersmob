@@ -4,8 +4,8 @@ class InterviewAppointmentsController < ApplicationController
 	end
 
 	def create
-		puts "params is ", params
 		@interview_appointment = InterviewAppointment.new(interview_params)
+		puts @interview_appointment.inspect
 		@interview_appointment.save
 		flash[:success] = 'Success!'  
     	redirect_to interview_appointment_path(:id => 1)

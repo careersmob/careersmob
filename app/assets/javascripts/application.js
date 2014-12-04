@@ -16,3 +16,4 @@
 //= require_tree .
 //= require main
 //= require plugins
+//= require google-instant-hangouts
